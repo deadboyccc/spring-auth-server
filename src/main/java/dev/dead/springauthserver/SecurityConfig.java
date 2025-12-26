@@ -106,7 +106,7 @@ public class SecurityConfig {
                 .scope(OidcScopes.PROFILE)
                 .scope("read:messages")
                 .scope("write:messages")
-                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
+                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(false).build())
                 .build();
 
         return new InMemoryRegisteredClientRepository(oidcClient);
